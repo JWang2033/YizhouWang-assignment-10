@@ -1,0 +1,9 @@
+flask
+torch
+transformers
+pillow
+scikit-learn
+open_clip_torch
+pandas
+numpy
+tqdm

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text-to-Image Search</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Search API</h1>
+    </header>
+    <main>
+        <!-- Text-to-Image Search -->
+        <section id="search-section">
+          <h2>Text-to-Image Search</h2>
+          <div id="search-container">
+              <label for="query-input">Enter Text Query:</label>
+              <input type="text" id="query-input" placeholder="e.g., A dog playing in the park">
+              <button id="search-button">Search</button>
+          </div>
+      </section>
+
+      <!-- Image-to-Image Search -->
+      <section id="image-search-section">
+          <h2>Image-to-Image Search</h2>
+          <div id="image-search-container">
+              <label for="image-input">Upload Image:</label>
+              <input type="file" id="image-input" accept="image/*">
+              <button id="image-search-button">Search</button>
+          </div>
+      </section>
+
+      <!-- Hybrid Search -->
+      <section id="hybrid-search-section">
+          <h2>Hybrid Search (Text + Image)</h2>
+          <div id="hybrid-search-container">
+              <label for="hybrid-query-input">Enter Text Query:</label>
+              <input type="text" id="hybrid-query-input" placeholder="e.g., A cat near a window">
+              <label for="hybrid-image-input">Upload Image:</label>
+              <input type="file" id="hybrid-image-input" accept="image/*">
+              <label for="lambda-input">Lambda (Weight for Text):</label>
+              <input type="range" id="lambda-input" min="0" max="1" step="0.1" value="0.5">
+              <span id="lambda-value">0.5</span>
+              <button id="hybrid-search-button">Search</button>
+          </div>
+      </section>
+
+        <section id="result-section">
+            <h2>Search Results</h2>
+            <div id="result-container">
+                <!-- Results will be displayed here dynamically -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Text-to-Image Search Application</p>
+    </footer>
+    <script src="/static/script.js"></script>
+</body>
+</html>
